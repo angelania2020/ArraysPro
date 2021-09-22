@@ -42,6 +42,8 @@ public class ArraysPro {
         }
         System.out.println("]");
         
+        System.out.println();
+        
         System.out.println("Двухмерный массив");
         Random random = new Random();
         int[][] nums3;
@@ -51,14 +53,48 @@ public class ArraysPro {
                 nums3[i][j] = random.nextInt(10);
             }
         }
+        
         System.out.println("nums3 = ");
-        //System.out.println(Arrays.toString(nums3));
+        //System.out.println(Arrays.toString(nums3)); адреса ячеек
         for(int i=0; i < nums3.length; i++) {
             for(int j = 0; j < nums3[i].length; j++) {
                 System.out.printf("%5d", nums3[i][j]);
             }
             System.out.println();
         }
+        
+        System.out.println("nums3 = ");
+        for(int i=0; i < nums3.length; i++) {
+            System.out.println(Arrays.toString(nums3[i]));
+            for(int j = 0; j < nums3[i].length; j++) {
+            }
+        }
+        
+        System.out.println();
+        
+        System.out.println("Зубчатый массив");
+        double[][] zubArray = new double[5][];
+        zubArray[0] = new double[2];
+        zubArray[1] = new double[3];
+        zubArray[2] = new double[4];
+        zubArray[3] = new double[5];
+        zubArray[4] = new double[6];
+        
+        //Заполнение массива
+        for(int i=0; i < zubArray.length; i++) {
+            for(int j = 0; j < zubArray[i].length; j++) {
+                zubArray[i][j] = random.nextDouble()*10;
+            }
+        }
+        
+        //Вывод массива на консоль
+        System.out.println("zubArray = ");
+        for(int i=0; i < zubArray.length; i++) {
+            for(int j = 0; j < zubArray[i].length; j++) {
+                System.out.printf("%-7.2f",zubArray[i][j]);
+            }
+            System.out.println();
+        }
+        
     }
-    
 }
